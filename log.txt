@@ -1,0 +1,23 @@
+[LOG] - Iteration: 1
+[SERVER 3] [SL 0] [DB 0] --- ['0', '0', '0', '1'] ===> [ON]
+[SERVER 1] [SL 1] [DB 1] --- ['0', '0', '0', '1'] ===> [ON]
+[SERVER 1] [SL 2] [DB 2] --- ['0', '0', '0', '1'] ===> [ON]
+[LOG] - Iteration: 2
+[LOG] - Iteration: 3
+[LOG] - Iteration: 4
+[LOG] - Iteration: 5
+[LOG] - Iteration: 6
+[SERVER 1] [SL 1] [DB 1] --- ['0', '0', '0', '0'] ===> [OFF]
+[LOG] - Iteration: 7
+[SERVER 0] [SL 1] [DB 1] --- ['0', '0', '0', '1'] ===> [ON]
+[LOG] - Iteration: 8
+[LOG] - Iteration: 9
+[LOG] - Iteration: 10
+[LOG] - Iteration: 11
+[SERVER 3] [SL 1] [DB 1] --- ['0', '0', '0', '0'] ===> [OFF]
+[LOG] - Iteration: 12
+[SERVER 0] [SL 0] [DB 0] --- ['1', '1', '1', '0'] ===> [OFF]
+[LOG] - Iteration: 13
+[SERVER 2] [SL 2] [DB 2] --- ['0', '0', '0', '0'] ===> [OFF]
+[LOG] - Iteration: 14
+[SERVER 2] [SL 1] [DB 1] --- ['0', '0', '0', '1'] ===> [ON]
