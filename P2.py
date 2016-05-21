@@ -112,10 +112,18 @@ class Server:
     def receive_data(self, data, id_sl, bd_id): #bd_id deberia desaparecer
 
         #self.bd_id = bd_id
+        self.bd_voting = True
         self.sl_id = id_sl
 
         for i in bdArray:
-            i.voting(data, id_sl) # Envia la votacion a las bases de datos
+            vote = i.voting(data, id_sl) # Envia la votacion a las bases de datos
+            if vote == False:
+                self.bd_voting = False # Si cualquiera devuelve false se cancelara la op.
+
+        if self.bd_voting == True:
+            for i in bdArray:
+                ack = i.update()
+
 
         self.bdArray[self.bd_id].write_data(data, self.sl_id)
         dataArray = self.bdArray[self.bd_id].getData(self.sl_id)
@@ -191,9 +199,14 @@ class Bd:
         if len(self.slList[sl_id - self.index]) == 5:
             self.slList[sl_id - self.index].remove(self.slList[sl_id - self.index][0])
 
-    def voting(self, data, sl_id):
-        if vote:
-            return 
+    def voting(self, data, sl_id, lamport):
+        if lamport == self.lamportList[sl_id] - 1_
+            vote = True
+        else 
+            vote = False 
+
+        if vote == True:
+            return True
 
 
 class Log:
